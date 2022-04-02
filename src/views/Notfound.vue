@@ -6,5 +6,7 @@
 h1 {
   margin-top: 4rem;
   text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
 }
 </style>
