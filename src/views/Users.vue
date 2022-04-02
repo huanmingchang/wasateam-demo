@@ -82,6 +82,10 @@ export default {
       height: 200px;
       width: 100%;
       background: var(--card);
+      &:hover {
+        border-color: #ff6600;
+        transform: scale(1.05);
+      }
       &--name {
         margin-bottom: 0.5rem;
         font-size: 1.5rem;
