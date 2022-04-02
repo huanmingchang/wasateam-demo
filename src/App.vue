@@ -83,8 +83,9 @@ export default {
     }
 
     &__light-input,
-    &__dark-inpout {
+    &__dark-input {
       margin-left: 0.5rem;
+      cursor: pointer;
     }
     &__light-input {
       margin-right: 2rem;
