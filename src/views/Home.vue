@@ -32,11 +32,11 @@ export default {
       font-size: 1rem;
       font-weight: 400;
       color: var(--font-color);
-      border: 1px solid var(--border);
-      border-radius: 4px;
+      text-decoration: underline;
       cursor: pointer;
       &:hover {
-        text-decoration: underline;
+        text-decoration-color: #ff6600;
+        color: #ff6600;
       }
     }
 
