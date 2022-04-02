@@ -62,7 +62,7 @@ export default {
     text-align: center;
     margin-bottom: 2rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: var(--font-color);
   }
@@ -88,7 +88,7 @@ export default {
       }
       &--name {
         margin-bottom: 0.5rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 700;
         color: var(--font-color);
       }
