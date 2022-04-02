@@ -2,10 +2,14 @@
   --font-color: #222222;
   --secondary-font-color: rgba(60, 60, 60, 0.6);
   --background: #fff;
+  --card: #ffffff;
+  --border: rgba(60, 60, 60, 0.6);
 }
 
 .theme_dark {
   --font-color: #fff;
   --secondary-font-color: rgba(235, 235, 235, 0.6);
   --background: #222222;
+  --card: #333333;
+  --border: rgba(235, 235, 235, 0.6);
 }
