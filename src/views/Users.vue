@@ -1,6 +1,6 @@
 <template>
   <div class="users">
-    <h1 class="users__title">Users API</h1>
+    <h1 class="users__title">Companion</h1>
     <div class="users__cards">
       <div v-for="user in users" :key="user.index" class="users__cards__card">
         <div class="users__cards__card--name">

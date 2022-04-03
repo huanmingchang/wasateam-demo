@@ -1,6 +1,6 @@
 <template>
   <div class="input">
-    <h1 class="input__title">Input</h1>
+    <h1 class="input__title">Options</h1>
     <div class="input__section">
       <label for="" class="input__section__label">Text</label>
       <input

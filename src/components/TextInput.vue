@@ -1,6 +1,6 @@
 <template>
   <div class="input-section">
-    <label for="" class="input-section__label">Example</label>
+    <label for="" class="input-section__label">What do you prefer?</label>
     <input
       type="text"
       class="input-section__text-input"

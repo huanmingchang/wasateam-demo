@@ -1,20 +1,20 @@
 <template>
   <div class="input-section">
-    <div class="input-section__title">My favorite language</div>
+    <div class="input-section__title">What's your favorite food?</div>
     <div class="input-section__section">
       <div
-        v-for="language in languages"
-        :key="language.index"
+        v-for="food in dishes"
+        :key="food.index"
         class="input-section__section__wrapper"
       >
         <label for="" class="input-section__section__wrapper__label">{{
-          language
+          food
         }}</label>
         <input
           type="radio"
           name="radio-input"
           class="input-section__section__wrapper__radio-input"
-          :value="language"
+          :value="food"
           v-model="input"
         />
       </div>
@@ -30,7 +30,7 @@ export default {
   name: 'RadioInput',
   data() {
     return {
-      languages: ['Javascript', 'Python', 'C++', 'Java', 'Ruby'],
+      dishes: ['Steak', 'Pasta', 'Fried noodle', 'Dumpling', 'Salad'],
       input: '',
     }
   },

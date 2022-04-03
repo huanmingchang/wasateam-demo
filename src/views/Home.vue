@@ -1,8 +1,10 @@
 <template>
   <div>
     <div class="home__router">
-      <router-link to="/users" class="home__router--users">Users</router-link>
-      <router-link to="/input" class="home__router--input">Input</router-link>
+      <router-link to="/users" class="home__router--companion"
+        >Companion</router-link
+      >
+      <router-link to="/input" class="home__router--input">Options</router-link>
     </div>
   </div>
 </template>
@@ -21,7 +23,7 @@ export default {
     align-items: center;
     justify-content: center;
     margin: 2rem auto;
-    &--users,
+    &--companion,
     &--input {
       display: flex;
       flex-direction: row;
@@ -40,7 +42,7 @@ export default {
       }
     }
 
-    &--users {
+    &--companion {
       margin-right: 2rem;
     }
   }
