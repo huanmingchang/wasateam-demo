@@ -1,5 +1,5 @@
 <template>
-  <div class="users">
+  <div v-if="!isLoading" class="users">
     <h1 class="users__title">Companion</h1>
     <div class="users__cards">
       <div v-for="user in users" :key="user.index" class="users__cards__card">
@@ -22,11 +22,13 @@ export default {
   data() {
     return {
       users: [],
+      isLoading: false,
     }
   },
   methods: {
     async getUsers() {
       try {
+        this.isLoading = true
         const response = await usersAPI.getUsers()
 
         if (response.status !== 200) {
@@ -34,8 +36,10 @@ export default {
         }
 
         this.users = response.data
+        this.isLoading = false
       } catch (error) {
         console.log(error)
+        this.isLoading = false
         alert('現在無法載入資料，請稍後再試')
       }
     },
@@ -50,7 +54,7 @@ export default {
 @import '../styles/mixin.scss';
 
 .users {
-  @include flex(column, center, center);
+  @include flex(column, start, center);
   width: 100%;
   height: 100%;
   padding: 2rem;
