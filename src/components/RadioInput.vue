@@ -64,13 +64,14 @@ export default {
       flex-direction: row;
       align-items: center;
       &__label {
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: 400;
         color: var(--font-color);
       }
 
       &__radio-input {
         margin-right: 1rem;
+        cursor: pointer;
       }
     }
   }
