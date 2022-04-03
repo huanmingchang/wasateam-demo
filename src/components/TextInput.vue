@@ -8,13 +8,14 @@
       v-model="input"
     />
     <div class="input-section__display">{{ input }}</div>
+    <div class="input-section__computed">{{ inputLength | letters }}</div>
     <button class="button" @click.stop.prevent="clear">Clear</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Input',
+  name: 'TextInput',
   data() {
     return {
       input: '',
@@ -23,6 +24,16 @@ export default {
   methods: {
     clear() {
       this.input = ''
+    },
+  },
+  computed: {
+    inputLength: function () {
+      return this.input.length
+    },
+  },
+  filters: {
+    letters: function (value) {
+      return value + ' letters'
     },
   },
 }
@@ -69,12 +80,22 @@ export default {
     color: var(--font-color);
     background: var(--background);
   }
+
+  &__computed {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.5rem;
+    color: var(--font-color);
+  }
 }
 
 .button {
   position: absolute;
   bottom: 10px;
   right: 10px;
+  font-size: 0.5rem;
   color: var(--font-color);
   cursor: pointer;
   &:hover {
