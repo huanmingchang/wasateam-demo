@@ -2,7 +2,7 @@
   <div>
     <div class="home__router">
       <router-link to="/users" class="home__router--users">Users</router-link>
-      <router-link to="" class="home__router--input">Input</router-link>
+      <router-link to="/input" class="home__router--input">Input</router-link>
     </div>
   </div>
 </template>

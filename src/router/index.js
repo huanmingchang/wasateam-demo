@@ -29,7 +29,18 @@ const routes = [
     meta: {
       title: 'Wasateam - users',
       content: {
-        description: 'This is user description',
+        description: 'This is users description',
+      },
+    },
+  },
+  {
+    path: '/input',
+    name: 'Input',
+    component: () => import('../views/Input.vue'),
+    meta: {
+      title: 'Wasateam - input',
+      content: {
+        description: 'This is input description',
       },
     },
   },
