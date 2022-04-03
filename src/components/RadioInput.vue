@@ -38,35 +38,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/mixin.scss';
+
 .input-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 1rem;
+  @include input-section;
   &__title {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--font-color);
+    @include font(var(--font-color), 1rem, 400);
     margin-bottom: 0.5rem;
   }
 
   &__section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    @include flex(row, start, center);
     &__wrapper {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
+      @include flex(row, start, center);
       &__label {
-        font-size: 0.8rem;
-        font-weight: 400;
-        color: var(--font-color);
+        @include font(var(--font-color), 0.8rem, 400);
       }
 
       &__radio-input {
@@ -77,10 +63,8 @@ export default {
   }
 
   &__display {
+    @include font(var(--font-color), 1rem, 700);
     margin-top: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--font-color);
   }
 }
 </style>

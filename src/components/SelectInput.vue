@@ -178,89 +178,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/mixin.scss';
+
 .input-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 1rem;
+  @include input-section;
   &__title {
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--font-color);
+    @include font(var(--font-color), 1rem, 400);
     margin-bottom: 0.5rem;
   }
 
   &__selections {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include flex(row, center, start);
     width: 100%;
     &__continents {
+      @include selection;
       margin-right: 2rem;
-      padding: 0.5rem;
-      width: 150px;
-      height: 40px;
-      font-size: 0.8rem;
-      font-weight: 400;
-      color: var(--font-color);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: var(--background);
-      &:hover {
-        border-color: #ff6600;
-      }
     }
 
     &__countries {
-      padding: 0.5rem;
-      width: 150px;
-      height: 40px;
-      font-size: 0.8rem;
-      font-weight: 400;
-      color: var(--font-color);
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: var(--background);
-      &:hover {
-        border-color: #ff6600;
-      }
+      @include selection;
     }
   }
 
   &__button {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.5rem;
-    color: var(--font-color);
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-      text-decoration-color: #ff6600;
-      color: #ff6600;
-    }
+    @include button;
   }
 
   &__display {
-    margin-top: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--font-color);
+    @include display;
   }
 
   &__actual {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    font-size: 0.5rem;
-    font-weight: 400;
-    color: var(--secondary-font-color);
+    @include remark;
   }
 }
 </style>

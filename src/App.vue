@@ -54,8 +54,8 @@ export default {
   &__title {
     @include font(var(--font-color), 2rem, 700);
     width: 100%;
-    text-align: center;
     margin-bottom: 0.5rem;
+    text-align: center;
   }
 
   &__subtitle {

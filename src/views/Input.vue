@@ -67,7 +67,6 @@ export default {
   &__title {
     @include font(var(--font-color), 1.5rem, 700);
     width: 100%;
-    text-align: center;
     margin-bottom: 2rem;
     text-align: center;
   }
