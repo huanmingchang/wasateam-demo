@@ -71,6 +71,10 @@ export default {
       font-weight: 400;
       color: var(--secondary-font-color);
     }
+    &:hover,
+    &:focus {
+      border-color: #ff6600;
+    }
   }
 
   &__display {
@@ -84,8 +88,7 @@ export default {
   &__computed {
     position: absolute;
     bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 10px;
     font-size: 0.5rem;
     color: var(--font-color);
   }
@@ -94,7 +97,8 @@ export default {
 .button {
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 0.5rem;
   color: var(--font-color);
   cursor: pointer;

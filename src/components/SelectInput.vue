@@ -113,15 +113,15 @@
         </option>
       </select>
     </div>
-    <button class="input-section__button" @click.stop.prevent="showResult">
-      Submit
-    </button>
     <div v-if="isShown" class="input-section__display">
       I wanna to go {{ selectedCountry }} in {{ selectedContinent }}
     </div>
     <div v-if="isShown" class="input-section__actual">
       No, you should go to WasaTeam instead
     </div>
+    <button class="input-section__button" @click.stop.prevent="showResult">
+      Submit
+    </button>
   </div>
 </template>
 
@@ -167,6 +167,10 @@ export default {
   },
   methods: {
     showResult() {
+      if (!this.selectedContinent || !this.selectedCountry) {
+        alert('Please select continent and country first!')
+        return
+      }
       this.isShown = true
     },
   },
@@ -207,6 +211,9 @@ export default {
       border: 1px solid var(--border);
       border-radius: 4px;
       background: var(--background);
+      &:hover {
+        border-color: #ff6600;
+      }
     }
 
     &__countries {
@@ -219,11 +226,17 @@ export default {
       border: 1px solid var(--border);
       border-radius: 4px;
       background: var(--background);
+      &:hover {
+        border-color: #ff6600;
+      }
     }
   }
 
   &__button {
-    margin-top: 2rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 0.5rem;
     color: var(--font-color);
     cursor: pointer;
