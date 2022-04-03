@@ -55,35 +55,28 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/mixin.scss';
+
 .input {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
+  @include flex(column, center, center);
   width: 100%;
   height: 100%;
   padding: 2rem;
   margin: 0 auto;
   background: var(--background);
   &__title {
+    @include font(var(--font-color), 1.5rem, 700);
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
     text-align: center;
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--font-color);
   }
 
   &__section {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include flex(row, center, center);
     margin-bottom: 1rem;
     label {
-      font-size: 0.8rem;
-      color: var(--font-color);
+      @include font(var(--font-color), 0.8rem, 400);
     }
 
     input {
