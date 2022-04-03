@@ -1,8 +1,10 @@
 <template>
   <div>
     <div class="home__router">
-      <router-link to="/users" class="home__router--users">Users</router-link>
-      <router-link to="/input" class="home__router--input">Input</router-link>
+      <router-link to="/users" class="home__router--companion"
+        >Companion</router-link
+      >
+      <router-link to="/input" class="home__router--input">Options</router-link>
     </div>
   </div>
 </template>
@@ -14,24 +16,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/mixin.scss';
+
 .home {
   &__router {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include flex(row, center, center);
     margin: 2rem auto;
-    &--users,
+    &--companion,
     &--input {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      @include flex(row, center, center);
+      @include font(var(--font-color), 1rem, 400);
       width: 60px;
       height: 30px;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--font-color);
       text-decoration: underline;
       cursor: pointer;
       &:hover {
@@ -40,7 +36,7 @@ export default {
       }
     }
 
-    &--users {
+    &--companion {
       margin-right: 2rem;
     }
   }

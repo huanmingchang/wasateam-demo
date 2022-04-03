@@ -36,6 +36,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import './styles/mixin.scss';
+
 #app {
   width: 100vw;
   height: 100vh;
@@ -43,43 +45,31 @@ export default {
 }
 
 .home {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
+  @include flex(column, start, center);
   width: 100%;
   height: 100%;
   padding: 2rem;
   margin: 0 auto;
   background: var(--background);
-
   &__title {
+    @include font(var(--font-color), 2rem, 700);
     width: 100%;
-    text-align: center;
     margin-bottom: 0.5rem;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--font-color);
+    text-align: center;
   }
 
   &__subtitle {
+    @include font(var(--secondary-font-color), 1rem, 400);
     width: 100%;
     text-align: center;
-    font-size: 1rem;
-    font-weight: 400;
-    color: var(--secondary-font-color);
   }
 
   &__toggle {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include flex(row, center, center);
     margin-top: 1rem;
 
     label {
-      font-size: 0.8rem;
-      color: var(--font-color);
+      @include font(var(--font-color), 0.8rem, 400);
     }
 
     &__light-input,
