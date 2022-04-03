@@ -16,24 +16,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/mixin.scss';
+
 .home {
   &__router {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    @include flex(row, center, center);
     margin: 2rem auto;
     &--companion,
     &--input {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
+      @include flex(row, center, center);
+      @include font(var(--font-color), 1rem, 400);
       width: 60px;
       height: 30px;
-      font-size: 1rem;
-      font-weight: 400;
-      color: var(--font-color);
       text-decoration: underline;
       cursor: pointer;
       &:hover {
